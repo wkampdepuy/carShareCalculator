@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <table id="data" class="table table-striped">
+        <thead>
+        <tr>
+            <th>Service</th>
+            <th>Subscription</th>
+            <th>Plan</th>
+            <th>Car type</th>
+            <th>Total cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for option in options %}
+        <tr>
+            <td>{{ option.service }}</td>
+            <td>{{ option.subscription }}</td>
+            <td>{{ option.plan }}</td>
+            <td>{{ option.Car_type }}</td>
+            <td>{{ option.Total_cost }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

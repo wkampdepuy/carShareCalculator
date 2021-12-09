@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="POST">
+    <label for="duration">Trip duration (min.):</label>
+    <input type="number" name="duration"> <br>
+
+    <label for="kilometers">Trip distance (km):</label>
+    <input type="number" name="kilometers"> <br>
+
+    <label for="frequency">Trip frequency:</label>
+    <input type="number" name="frequency"> <br>
+    <input type="submit">
+</form>
+<!--<p>-->
+<!--    Service: {{ service }} <br>-->
+<!--    Subscription: {{ subscription }} <br>-->
+<!--    Plan: {{ plan }} <br>-->
+<!--    Car type: {{ car_type }} <br>-->
+<!--    Total cost: {{ total_cost }} <br>-->
+<!--</p>-->
+
+<p>
+    Duration: {{ minutes }} minutes <br>
+    Distance: {{ kilometers }} kilometers <br>
+    Frequency: {{ frequency }} time(s) per month
+</p>
+
+{% for option in table %}
+            {{titles[loop.index]}}
+            {{ option|safe }}
+{% endfor %}
+</body>
+</html>
