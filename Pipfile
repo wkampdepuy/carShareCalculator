@@ -8,6 +8,7 @@ numpy = "*"
 pandas = "*"
 tqdm = "*"
 matplotlib = "*"
+flask = "*"
 
 [dev-packages]
 
