@@ -10,6 +10,7 @@ tqdm = "*"
 matplotlib = "*"
 flask = "*"
 gunicorn = "*"
+openpyxl = "*"
 
 [dev-packages]
 
