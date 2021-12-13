@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from packages.calc import carshare_calculator
+from calc import carshare_calculator
 
 app = Flask(__name__)
 

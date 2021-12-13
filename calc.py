@@ -4,8 +4,8 @@ import numpy as np
 
 def carshare_calculator(minutes, kilometers, frequency=1):
     # input
-    data_df = pd.read_excel("../carShareCalc/carshare_data_v4.xlsx")
-    sixt_packages = pd.read_excel("../carShareCalc/carshare_data_v4.xlsx", sheet_name='Sixt packages')
+    data_df = pd.read_excel("carshare_data_v4.xlsx")
+    sixt_packages = pd.read_excel("carshare_data_v4.xlsx", sheet_name='Sixt packages')
 
     data = data_df.copy()
 
