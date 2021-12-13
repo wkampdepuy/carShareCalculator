@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
 from calc import carshare_calculator
+import os
 
-app = Flask(__name__)
+template_dir = os.path.abspath('../templates')
+static_dir = os.path.abspath('../static')
+
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
@@ -17,11 +21,11 @@ def my_form_post():
         carshare_options = carshare_options[output_columns]
         carshare_options.columns = carshare_options.columns.str.replace(' ', '_')
 
-        return render_template('..templates/index.html', kilometers=kms, minutes=mins, frequency=freq,
+        return render_template("index.html", kilometers=kms, minutes=mins, frequency=freq,
                                table=[carshare_options.to_html(classes='data')],
                                titles=carshare_options.columns.values)
     else:
-        return render_template('..templates/index.html', options='blank')
+        return render_template('index.html', options='blank')
 
 
 if __name__ == '__main__':
