@@ -17,11 +17,11 @@ def my_form_post():
         carshare_options = carshare_options[output_columns]
         carshare_options.columns = carshare_options.columns.str.replace(' ', '_')
 
-        return render_template('index.html', kilometers=kms, minutes=mins, frequency=freq,
+        return render_template('..templates/index.html', kilometers=kms, minutes=mins, frequency=freq,
                                table=[carshare_options.to_html(classes='data')],
                                titles=carshare_options.columns.values)
     else:
-        return render_template('index.html', options='blank')
+        return render_template('..templates/index.html', options='blank')
 
 
 if __name__ == '__main__':
