@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath services.app:app
+web: gunicorn --chdir services app:app
