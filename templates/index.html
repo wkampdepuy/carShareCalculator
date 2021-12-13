@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
 <body>
 <form method="POST">
     <label for="duration">Trip duration (min.):</label>
@@ -27,8 +30,8 @@
 </p>
 
 {% for option in table %}
-            {{titles[loop.index]}}
-            {{ option|safe }}
+{{titles[loop.index]}}
+{{ option|safe }}
 {% endfor %}
 </body>
 </html>
